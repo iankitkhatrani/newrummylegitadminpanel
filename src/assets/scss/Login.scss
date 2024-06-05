@@ -1,0 +1,149 @@
+#login {
+  height: 100vh;
+  background-color: #222736;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form {
+    color: #fff;
+    width: 400px;
+    border-radius: 5px;
+
+    form {
+      background-color: #2a3042;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .banner {
+        height: 150px;
+        background-image: url("../images/profile-img.png");
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #34406b;
+      }
+
+      form {
+        padding: 10px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .input {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          label {
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 5px;
+            color: #c3cbe4;
+          }
+
+          input {
+            padding: 10px;
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #32394e;
+            border-radius: 5px;
+          }
+        }
+
+        input::placeholder {
+          color: #fff;
+          font-weight: 300;
+          letter-spacing: 0.03em;
+        }
+
+        .remember {
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          label {
+            font-size: 14px;
+            color: #c3cbe4;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+          }
+        }
+
+        button {
+          background-color: #556ee6;
+          color: #fff;
+          width: 100%;
+          border: none;
+          padding: 8px 10px;
+          border-radius: 5px;
+          margin-top: 10px;
+          border: 2px solid transparent;
+        }
+        button:focus {
+          border: 2px solid #34406b;
+        }
+      }
+
+      .sign-in {
+        margin-bottom: 20px;
+        text-align: center;
+
+        h4 {
+          font-weight: 400;
+          letter-spacing: 0.03em;
+          font-size: 15px;
+        }
+
+        .btns {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 10px;
+
+          button {
+            height: 35px;
+            width: 35px;
+            border-radius: 50px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i {
+              color: #fff;
+              font-size: 20px;
+            }
+          }
+
+          .facebook {
+            background-color: #556ee6;
+          }
+
+          .google {
+            background-color: #f46a6a;
+          }
+        }
+      }
+    }
+
+    .sign-up {
+      text-align: center;
+      padding: 20px 0;
+
+      p {
+        color: #c3cbe4;
+        font-size: 14px;
+
+        strong {
+          color: rgb(85 110 230);
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

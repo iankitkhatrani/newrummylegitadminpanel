@@ -1,0 +1,225 @@
+#admin-navigation {
+  max-width: 300px;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #2a3042;
+  color: #fff;
+  padding: 0px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+
+  .Logo {
+    padding-top: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #2a3042;
+    z-index: 909090;
+
+    h2 {
+      color: #fff;
+    }
+
+    i {
+      color: #ffff;
+      cursor: pointer;
+    }
+  }
+
+  small {
+    color: #707faf;
+    cursor: default;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    text-transform: uppercase;
+  }
+
+  span {
+    color: #707faf;
+    font-weight: 500;
+    display: block;
+    font-size: 15px;
+    position: relative;
+    letter-spacing: 0.03em;
+    transition: all 0.4s;
+    line-height: 1;
+  }
+
+  i {
+    color: #707faf;
+    font-size: 20px;
+  }
+
+  .menu {
+    z-index: -1;
+    .active {
+      span {
+        color: #fff !important;
+      }
+
+      i {
+        color: #fff !important;
+      }
+    }
+
+    .options {
+      height: fit-content;
+      margin: 1.4rem 0;
+
+      .item {
+        // border: 2px solid;
+        position: relative;
+
+        input {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          cursor: pointer;
+          display: none;
+        }
+
+        input[type="radio"]:checked + .sublinks {
+          display: none !important;
+        }
+      }
+
+      .sublinks {
+        // display: none;
+        margin-left: 2.4rem;
+        margin-top: 15px;
+
+        ul {
+          // border: 1px solid;
+          li {
+            line-height: 1;
+            margin-bottom: 14px;
+            font-weight: 400;
+            color: #707faf;
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+#admin-navigation::-webkit-scrollbar {
+  width: 6px;
+}
+
+#admin-navigation::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#admin-navigation::-webkit-scrollbar-thumb {
+  color: tomato;
+  border-radius: 5px;
+  border-left: 7px solid #7f8387;
+}
+
+.none-fullview {
+  display: none;
+}
+
+// ---------------------------------------------------- SIDEBAR -------------------------------------------------
+#side-barview {
+  width: 100px;
+  height: 100vh;
+  // overflow-y: scroll;
+  background-color: #2a3042;
+  color: #fff;
+  padding: 0px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  border: 1px solid #ccc;
+
+  .logo {
+    padding-top: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #2a3042;
+    z-index: 909090;
+  }
+
+  #nav-list {
+    border: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+
+    .listss {
+      position: relative;
+
+      i {
+        font-size: 28px;
+      }
+
+      .sub-lists {
+        position: absolute;
+        top: 15%;
+        left: 100%;
+        .item {
+          padding-left: 32px;
+
+          .links {
+            background-color: #32394e;
+            border: 1px solid #32394e;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#side-barview::-webkit-scrollbar {
+  width: 0px;
+}
+
+#side-barview::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#side-barview::-webkit-scrollbar-thumb {
+  color: tomato;
+  border-radius: 5px;
+  border-left: 7px solid #7f8387;
+}
+

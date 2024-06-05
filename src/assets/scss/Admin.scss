@@ -1,0 +1,447 @@
+#admin {
+  padding: 20px;
+  background-color: #222736;
+  color: #fff;
+  overflow: scroll;
+  min-height: 100vh;
+  height: 100%;
+
+  .bredcremp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: 0.03em;
+      opacity: 0.9;
+      font-weight: 550;
+    }
+
+    .page-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      p {
+        font-size: 14px;
+        letter-spacing: 0.03em;
+      }
+
+      .active {
+        color: #fff;
+      }
+
+      .not {
+        color: #c3cbe4;
+      }
+    }
+  }
+
+  .content {
+    margin-top: 30px;
+    height: 400px;
+    border-radius: 5px;
+    color: #fff;
+
+    .add-btn {
+      //   background-color: #2a3042;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+
+      button {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #556ee6;
+        color: #fff;
+        display: flex;
+        gap: 3px;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .user-list {
+      background-color: #2a3042;
+      margin: 20px 0;
+      overflow-x: scroll;
+      padding-bottom: 10px;
+
+      table {
+        border-radius: 5px;
+        font-weight: normal;
+        border: none;
+        border-collapse: collapse;
+        width: 100%;
+        white-space: nowrap;
+
+        thead {
+          th {
+            padding: 15px;
+          }
+        }
+
+        .td-name {
+          font-weight: 500;
+        }
+
+        td,
+        th {
+          padding: 8px 15px;
+          text-align: start;
+        }
+
+        th {
+          background-color: #32394e;
+          color: #a6b0cf;
+          font-weight: 500;
+          letter-spacing: 0.03em;
+          font-size: 15px;
+        }
+
+        td {
+          font-size: 14px;
+          text-align: start;
+          font-weight: 400;
+          letter-spacing: 0.03em;
+          color: #a6b0cf;
+
+          img {
+            width: 50px;
+            border-radius: 5px;
+          }
+
+          p {
+            font-size: 13px;
+          }
+
+          .time {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .active {
+            background-color: #34c38f2e;
+            color: #34c38f;
+            font-size: 13px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-weight: 500;
+          }
+
+          .inactive {
+            background-color: rgb(244 106 106);
+            color: #fff;
+            font-size: 13px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-weight: 500;
+          }
+
+          button {
+            margin: 0 5px;
+            background-color: transparent;
+            border: none;
+            font-size: 22px;
+          }
+
+          .edit {
+            color: rgb(52 195 143);
+          }
+
+          .deleate {
+            color: rgb(244 106 106);
+          }
+        }
+
+        .chargeback {
+          color: #f46a6a;
+          background: #f46a6a2e;
+          border-radius: 5px;
+          padding: 5px 10px;
+          font-weight: 500;
+        }
+
+        .paid {
+          color: #34c38f;
+          background: #34c38f2e;
+          border-radius: 5px;
+          padding: 5px 10px;
+          font-weight: 500;
+        }
+
+        .unpaid {
+          color: #f1b44c;
+          background: #f1b44c2e;
+          border-radius: 5px;
+          padding: 5px 10px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .pagination {
+      padding-bottom: 30px;
+      color: #c3cbe4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .pagination-action {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .middle {
+          display: flex;
+          align-items: center;
+          .active {
+            background-color: #556ee6;
+            color: #fff;
+            border: 2px solid #32394e;
+          }
+          p {
+            margin: 0 5px;
+            height: 30px;
+            width: 30px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid none;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .show {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+      }
+    }
+  }
+}
+
+#admin::-webkit-scrollbar {
+  display: none;
+}
+
+.addmin-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 90090;
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .item {
+    width: 400px;
+    background-color: red;
+    border-radius: 5px;
+    border: 1px solid #353d55;
+    background-color: #2a3042;
+    padding: 20px;
+    color: #fff;
+
+    .input {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+
+      label {
+        color: #c3cbe4;
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #353d55;
+        color: #fff;
+        outline: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+      }
+
+      select {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #353d55;
+        color: #fff;
+        outline: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+
+        option {
+          background-color: #2a3042;
+        }
+      }
+    }
+
+    .btns {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+
+      button {
+        width: 100%;
+        padding: 5px 25px;
+        border-radius: 5px;
+        border: none;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        background-color: #74788d;
+        color: #fff;
+      }
+
+      button:hover {
+        opacity: 0.9;
+      }
+
+      .cancel {
+        background-color: #f46a6a;
+      }
+
+      .add {
+        background-color: #536bde;
+      }
+    }
+  }
+}
+
+.edit-admin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 90090;
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .admin-item {
+    width: 80%;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #353d55;
+    background-color: #2a3042;
+
+    h4 {
+      color: #fff;
+      font-weight: 500;
+      font-size: 15px;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    .eedit-box {
+      display: grid;
+      grid-template-columns: repeat(5, 2fr);
+      gap: 10px;
+      color: #fff;
+
+      .edit {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        label {
+          color: #c3cbe4;
+          font-size: 13px;
+          line-height: 1;
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 20px;
+      display: flex;
+      justify-content: end;
+      gap: 10px;
+
+      button {
+        padding: 8px 25px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        background-color: #74788d;
+        color: #fff;
+      }
+
+      button:hover {
+        opacity: 0.9;
+      }
+
+      .cancel {
+        background-color: #f46a6a;
+        color: #fff;
+      }
+
+      .add {
+        background-color: #536bde;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  #admin {
+    padding: 10px;
+  }
+   
+  #admin .content .pagination {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .withdrawal-container .form {
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+  }
+
+  .withdrawal-container .btn button {
+    width: 100%;
+  }
+
+
+  .edit-admin {
+    overflow: hidden;
+  }
+
+  .edit-admin .admin-item {
+    height: 90%;
+    width: 95%;
+    overflow-y: scroll;
+  }
+
+  .edit-admin .admin-item .eedit-box {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .edit-admin .admin-item .btn button {
+    width: 100%;
+  }
+}

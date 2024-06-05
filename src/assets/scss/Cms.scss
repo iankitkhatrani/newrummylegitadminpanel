@@ -1,0 +1,141 @@
+#cms {
+  padding: 20px;
+  background-color: #222736;
+  color: #fff;
+  min-height: 100vh;
+
+  .bredcremp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: 0.03em;
+      opacity: 0.9;
+      font-weight: 550;
+    }
+
+    .page-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      p {
+        font-size: 14px;
+        letter-spacing: 0.03em;
+      }
+
+      .active {
+        color: #fff;
+      }
+
+      .not {
+        color: #c3cbe4;
+      }
+    }
+  }
+
+  .content {
+    // height: 500px;
+    margin-top: 30px;
+
+    .title {
+      width: 100%;
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      label {
+        font-size: 14px;
+        color: #c3cbe4;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #353d55;
+        color: #fff;
+        outline: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+      }
+
+      input::-webkit-input-placeholder {
+        color: #ffff;
+        font-size: 12px;
+      }
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+
+      label {
+        font-size: 14px;
+        color: #c3cbe4;
+      }
+
+      textarea {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #353d55;
+        color: #fff;
+        outline: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+      }
+    }
+
+    .btn {
+      display: flex;
+      justify-content: end;
+
+      button {
+        border-radius: 5px;
+        padding: 6px 20px;
+        width: fit-content;
+        background-color: #556ee6;
+        color: #fff;
+        border: none;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.CKEditorComponent {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.editor-output {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  // background-color: #f9f9f9;
+  color: #000;
+}
+
+.ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
+  color: #000;
+}
+
+
+@media screen and (max-width: 768px) {
+  #cms {
+    padding: 10px;
+  }
+
+  #cms .content .btn button {
+    width: 100%;
+    margin-top: 0;
+  }
+}

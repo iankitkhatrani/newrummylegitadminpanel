@@ -1,0 +1,317 @@
+#transtion-management {
+  padding: 20px;
+  background-color: #222736;
+  min-height: 100vh;
+  height: 100%;
+
+  .bredcremp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: 0.03em;
+      opacity: 0.9;
+      font-weight: 550;
+    }
+
+    .page-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      p {
+        font-size: 14px;
+        letter-spacing: 0.03em;
+      }
+
+      .active {
+        color: #fff;
+      }
+
+      .not {
+        color: #c3cbe4;
+      }
+    }
+  }
+
+  .management {
+    margin: 30px 0;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #2a3042;
+
+    .search-filter {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        background-color: transparent;
+        border: 1px solid #353d55;
+        color: #fff;
+        border-radius: 5px;
+        padding: 5px 10px;
+      }
+
+      input::-webkit-input-placeholder {
+        color: #ffff;
+      }
+
+      i {
+        font-size: 22px;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      button {
+        background-color: #556ee6;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+      }
+    }
+
+    .user-list {
+      margin: 20px 0;
+      overflow-x: scroll;
+      padding-bottom: 10px;
+
+      table {
+        border-radius: 5px;
+        font-weight: normal;
+        border: none;
+        border-collapse: collapse;
+        width: 100%;
+        white-space: nowrap;
+
+        thead {
+          th {
+            padding: 15px;
+          }
+        }
+
+        .td-name {
+          font-weight: 500;
+        }
+
+        td,
+        th {
+          padding: 8px 15px;
+          text-align: start;
+        }
+
+        th {
+          background-color: #32394e;
+          color: #a6b0cf;
+          font-weight: 500;
+          letter-spacing: 0.03em;
+          font-size: 15px;
+        }
+
+        td {
+          font-size: 14px;
+          text-align: start;
+          font-weight: 400;
+          letter-spacing: 0.03em;
+          color: #a6b0cf;
+
+          a {
+            color: #c3cbe4;
+          }
+
+          a:hover {
+            color: #556ee6;
+          }
+
+          img {
+            width: 35px;
+            border-radius: 50px;
+          }
+
+          p {
+            font-size: 13px;
+          }
+
+          .time {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .active {
+            background-color: #34c38f2e;
+            color: #34c38f;
+            font-size: 13px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-weight: 500;
+          }
+
+          .inactive {
+            background-color: rgb(244 106 106);
+            color: #fff;
+            font-size: 13px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-weight: 500;
+          }
+
+          button {
+            margin: 0 5px;
+            background-color: transparent;
+            border: none;
+            font-size: 22px;
+          }
+
+          .edit {
+            color: rgb(52 195 143);
+          }
+
+          .deleate {
+            color: rgb(244 106 106);
+          }
+        }
+
+        .chargeback {
+          color: #f46a6a;
+          background: #f46a6a2e;
+          border-radius: 5px;
+          padding: 5px 10px;
+          font-weight: 500;
+        }
+
+        .paid {
+          color: #34c38f;
+          background: #34c38f2e;
+          border-radius: 5px;
+          padding: 5px 10px;
+          font-weight: 500;
+        }
+
+        .unpaid {
+          color: #f1b44c;
+          background: #f1b44c2e;
+          border-radius: 5px;
+          padding: 5px 10px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .pagination {
+      color: #c3cbe4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .pagination-action {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .middle {
+          display: flex;
+          align-items: center;
+          .active {
+            background-color: #556ee6;
+            color: #fff;
+            border: 2px solid #32394e;
+          }
+          p {
+            margin: 0 5px;
+            height: 30px;
+            width: 30px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid none;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .show {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  #transtion-management {
+    padding: 10px;
+  }
+
+  #transtion-management .bredcremp h4 {
+    line-height: 1;
+  }
+
+  #transtion-management .bredcremp .page-title {
+    width: 100%;
+    justify-content: end;
+  }
+
+  #transtion-management .management .search-filter {
+    display: -webkit-flex;
+    overflow: scroll;
+    gap: 10px;
+    padding-bottom: 15px;
+
+    button {
+      line-height: 1;
+    }
+  }
+
+  #transtion-management .management {
+    padding: 10px;
+  }
+
+  #transtion-management .management .pagination {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  
+  #transtion-management .management .search-filter input {
+    height: 45px;
+  }
+
+  #transtion-management .management .search-filter button {
+    height: 45px;
+  }
+
+  #game .pending-content .search-filter {
+   flex-wrap: wrap;
+    gap: 10px !important;
+  }
+
+  
+  #game .pending-content .search-filter .date {
+    width: 100%;
+  }
+  
+  #game .pending-content .search-filter input {
+    width: 100% !important;
+  }
+
+  #game .pending-content .search-filter select{
+    width: 100% !important;
+  }
+
+  #game .pending-content .search-filter button {
+    line-height: 1;
+  }
+
+
+}

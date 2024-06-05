@@ -1,0 +1,370 @@
+#bank-management {
+  padding: 20px;
+  background-color: #222736;
+
+  .bredcremp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: 0.03em;
+      opacity: 0.9;
+      font-weight: 550;
+    }
+
+    .page-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      p {
+        font-size: 14px;
+        letter-spacing: 0.03em;
+      }
+
+      .active {
+        color: #fff;
+      }
+
+      .not {
+        color: #c3cbe4;
+      }
+    }
+  }
+
+  .content {
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 5px;
+    background-color: #2a3042;
+
+    .search-filter {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      input {
+        background-color: transparent;
+        border: 1px solid #353d55;
+        color: #fff;
+        border-radius: 5px;
+        padding: 5px 10px;
+      }
+
+      input::-webkit-input-placeholder {
+        color: #ffff;
+      }
+
+      i {
+        font-size: 22px;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      button {
+        background-color: #556ee6;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+      }
+    }
+
+    .user-list {
+      margin: 20px 0;
+      overflow-x: scroll;
+      padding-bottom: 10px;
+
+      table {
+        border-radius: 5px;
+        font-weight: normal;
+        border: none;
+        border-collapse: collapse;
+        width: 100%;
+        white-space: nowrap;
+
+        thead {
+          th {
+            padding: 15px;
+          }
+        }
+
+        .td-name {
+          font-weight: 500;
+        }
+
+        td,
+        th {
+          padding: 8px 15px;
+          text-align: start;
+        }
+
+        th {
+          background-color: #32394e;
+          color: #a6b0cf;
+          font-weight: 500;
+          letter-spacing: 0.03em;
+          font-size: 15px;
+        }
+
+        td {
+          font-size: 14px;
+          text-align: start;
+          font-weight: 400;
+          letter-spacing: 0.03em;
+          color: #a6b0cf;
+
+          a {
+            color: #c3cbe4;
+          }
+
+          a:hover {
+            color: #556ee6;
+          }
+
+          img {
+            width: 35px;
+            border-radius: 50px;
+          }
+
+          p {
+            font-size: 13px;
+          }
+
+          .time {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .active {
+            background-color: #34c38f2e;
+            color: #34c38f;
+            font-size: 13px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-weight: 500;
+          }
+
+          .declined {
+            background-color: rgb(244 106 106);
+            color: #fff;
+            font-size: 13px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-weight: 500;
+          }
+
+          button {
+            margin: 0 5px;
+            background-color: transparent;
+            border: none;
+            font-size: 22px;
+          }
+
+          .edit {
+            color: rgb(52 195 143);
+          }
+
+          .deleate {
+            color: rgb(244 106 106);
+          }
+        }
+
+        .chargeback {
+          color: #f46a6a;
+          background: #f46a6a2e;
+          border-radius: 5px;
+          padding: 5px 10px;
+          font-weight: 500;
+        }
+
+        .paid {
+          color: #34c38f;
+          background: #34c38f2e;
+          border-radius: 5px;
+          padding: 5px 10px;
+          font-weight: 500;
+        }
+
+        .unpaid {
+          color: #f1b44c;
+          background: #f1b44c2e;
+          border-radius: 5px;
+          padding: 5px 10px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .pagination {
+      color: #c3cbe4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .pagination-action {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .middle {
+          display: flex;
+          align-items: center;
+          .active {
+            background-color: #556ee6;
+            color: #fff;
+            border: 2px solid #32394e;
+          }
+          p {
+            margin: 0 5px;
+            height: 30px;
+            width: 30px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid none;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .show {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+      }
+    }
+  }
+}
+
+.edit-bankmanagement {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999000;
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .item {
+    padding: 20px;
+    width: 80%;
+    background-color: #222736;
+    color: #fff;
+    border: 1px solid #32394e;
+    border-radius: 5px;
+
+    h4 {
+      font-size: 17px;
+      letter-spacing: 0.03em;
+      font-weight: 550;
+    }
+
+    .edit-form {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+
+      .input {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        label {
+          color: #c3cbe4;
+          font-size: 14px;
+        }
+
+        input,
+        select {
+          width: 100%;
+          background-color: transparent;
+          border: 1px solid #353d55;
+          color: #fff;
+          outline: none;
+          border-radius: 5px;
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    .action-btn {
+      margin-top: 10px;
+      display: flex;
+      justify-content: end;
+      gap: 10px;
+
+      button {
+        padding: 5px 25px;
+        border-radius: 5px;
+        border: none;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        background-color: #74788d;
+        color: #fff;
+      }
+
+      button:hover {
+        opacity: 0.9;
+      }
+
+      .cancel {
+        background-color: #f46a6a;
+      }
+
+      .add {
+        background-color: #536bde;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #bank-management {
+    padding: 10px;
+  }
+  #bank-management .content {
+    padding: 10px;
+    height: 100vh;
+  }
+
+  #bank-management .content .search-filter {
+    display: -webkit-flex;
+    gap: 10px;
+    overflow: scroll;
+    padding-bottom: 10px;
+  }
+
+  #bank-management .content .pagination {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .edit-bankmanagement .item .edit-form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .edit-bankmanagement .item {
+    width: 95%;
+    height: 90%;
+    overflow: scroll;
+  }
+
+  .edit-bankmanagement .item .action-btn {
+    margin-top: 20px;
+    button {
+      width: 100%;
+    }
+  }
+}
